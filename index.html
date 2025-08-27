@@ -407,6 +407,8 @@
         html, body { width: 100%; overflow-x: hidden; }
         img, svg, video, canvas { max-width: 100%; height: auto; }
         * { box-sizing: border-box; }
+        /* Prevent horizontal overflow on sections */
+        section { overflow-x: clip; }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
