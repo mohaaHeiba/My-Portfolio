@@ -409,6 +409,11 @@
         * { box-sizing: border-box; }
         /* Prevent horizontal overflow on sections */
         section { overflow-x: hidden; }
+        /* Defensive responsive rules to prevent right-side overflow */
+        .grid, .flex { min-width: 0; }
+        .max-w-7xl, .mx-auto, .px-6 { max-width: 100%; }
+        p, a, span, h1, h2, h3, h4, h5, h6 { overflow-wrap: anywhere; word-break: break-word; }
+        .glass-card, .glass-card-enhanced { max-width: 100%; }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
@@ -618,7 +623,7 @@
     <div class="section-divider"></div>
 
     <!-- About Section -->
-    <section id="about" class="section-padding">
+    <section id="about" class="section-padding overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
                 <h2 class="text-6xl font-black mb-8 gradient-text font-orbitron neon-glow">About Me</h2>
