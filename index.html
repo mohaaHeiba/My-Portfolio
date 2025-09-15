@@ -414,6 +414,124 @@
         .max-w-7xl, .mx-auto, .px-6 { max-width: 100%; }
         p, a, span, h1, h2, h3, h4, h5, h6 { overflow-wrap: anywhere; word-break: break-word; }
         .glass-card, .glass-card-enhanced { max-width: 100%; }
+        
+        /* Timeline Styles */
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #3b82f6, #00d4ff, #8b5cf6);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 120px;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 32px;
+            top: 20px;
+            width: 36px;
+            height: 36px;
+            background: #1a1a1a;
+            border: 3px solid #00d4ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        
+        .timeline-marker::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #00d4ff;
+            border-radius: 50%;
+        }
+        
+        .timeline-content {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 
+                0 25px 50px rgba(59, 130, 246, 0.2),
+                0 0 40px rgba(0, 212, 255, 0.1);
+        }
+        
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .timeline-company {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-dates {
+            color: #aaaaaa;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-description {
+            color: #aaaaaa;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-container {
+                padding: 0 1rem;
+            }
+            
+            .timeline-line {
+                left: 25px;
+            }
+            
+            .timeline-item {
+                padding-left: 80px;
+            }
+            
+            .timeline-marker {
+                left: 12px;
+                width: 28px;
+                height: 28px;
+            }
+            
+            .timeline-marker::before {
+                width: 16px;
+                height: 16px;
+            }
+        }
     </style>
 </head>
 <body class="text-white overflow-x-hidden">
@@ -664,9 +782,11 @@
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
                             </div>
-                            <h4 class="text-2xl font-bold font-orbitron">Mobile Development</h4>
+                            <div>
+                                <h4 class="text-2xl font-bold font-orbitron">Mobile Development</h4>
+                                <p class="text-gray-400 text-lg">Flutter, Dart, Cross-platform</p>
+                            </div>
                         </div>
-                        <p class="text-gray-300 text-lg leading-relaxed">Expert in Flutter and Dart, creating cross-platform mobile applications with beautiful UIs and seamless performance.</p>
                     </div>
 
                
@@ -678,9 +798,11 @@
                                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
                                 </svg>
                             </div>
-                            <h4 class="text-2xl font-bold font-orbitron">Cloud & Backend</h4>
+                            <div>
+                                <h4 class="text-2xl font-bold font-orbitron">Cloud & Backend</h4>
+                                <p class="text-gray-400 text-lg">Firebase, Google Cloud, APIs</p>
+                            </div>
                         </div>
-                        <p class="text-gray-300 text-lg leading-relaxed">Proficient in Firebase, cloud deployment, and backend optimization for scalable application architecture.</p>
                     </div>
                 </div>
             </div>
@@ -693,80 +815,59 @@
     <section id="experience" class="section-padding geometric-bg overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="text-6xl font-black mb-8 gradient-text font-orbitron neon-glow">Professional Experience</h2>
+                <h2 class="text-6xl font-black mb-8 gradient-text font-orbitron neon-glow">Experience</h2>
                 <p class="text-2xl text-gray-300 max-w-4xl mx-auto font-light">
-                    Hands-on experience in cutting-edge technologies and real-world applications
+                    Professional journey in software development and technology innovation
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- IoT Internship -->
-                <div class="glass-card-enhanced rounded-3xl p-10 hover-lift">
-                    <div class="flex items-center mb-8">
-                        <div class="w-20 h-20 bg-gradient-to-br from-electric-blue to-neon-blue rounded-2xl flex items-center justify-center mr-6">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-white mb-2 font-orbitron">IoT Internship</h3>
-                            <p class="text-neon-blue font-bold text-xl">2024</p>
-                        </div>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-neon-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Developed a real-time IoT prototype using <strong>MQTT protocol</strong>
-                            </p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-neon-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Successfully connected and managed <strong>3+ hardware sensors</strong> with <strong>95%+ stability</strong>
-                            </p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-neon-blue rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Conducted comprehensive network stability testing under various conditions
-                            </p>
-                        </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+               
+
+                <!-- Cloud Computing Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Cloud Computing Intern</h3>
+                        <div class="timeline-company">@Tech Solutions Inc.</div>
+                        <div class="timeline-dates">2024 | Remote</div>
+                        <p class="timeline-description">
+                            Deployed multiple scalable applications on Firebase and Google Cloud platforms, 
+                            optimized backend performance achieving 25% improvement in API response times, 
+                            and implemented efficient data structuring and API integration strategies.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Cloud Computing Internship -->
-                <div class="glass-card-enhanced rounded-3xl p-10 hover-lift">
-                    <div class="flex items-center mb-8">
-                        <div class="w-20 h-20 bg-gradient-to-br from-neon-blue to-purple rounded-2xl flex items-center justify-center mr-6">
-                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-white mb-2 font-orbitron">Cloud Computing Internship</h3>
-                            <p class="text-purple font-bold text-xl">2024</p>
-                        </div>
+                <!-- IoT Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">IoT Development Intern</h3>
+                        <div class="timeline-company">@Innovation Labs</div>
+                        <div class="timeline-dates">2024 | Giza, Egypt</div>
+                        <p class="timeline-description">
+                            Developed a real-time IoT prototype using MQTT protocol, successfully connected and managed 
+                            3+ hardware sensors with 95%+ stability, and conducted comprehensive network stability testing 
+                            under various conditions.
+                        </p>
                     </div>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-purple rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Deployed multiple scalable applications on <strong>Firebase and Google Cloud</strong> platforms
-                            </p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-purple rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Optimized backend performance, achieving <strong>25% improvement</strong> in API response times
-                            </p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-3 h-3 bg-purple rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                Implemented efficient data structuring and API integration strategies
-                            </p>
-                        </div>
+                </div>
+
+                <!-- Software Development Projects -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Freelance Mobile Developer</h3>
+                        <div class="timeline-company">@Independent Projects</div>
+                        <div class="timeline-dates">2023 – Present | Remote</div>
+                        <p class="timeline-description">
+                            Created innovative Flutter applications including Metro Guide, The Magnificent Three AI diagnostic tool, 
+                            Spotify Clone, and The Grimoire reading platform. Specialized in cross-platform development, 
+                            AI integration, and user experience optimization.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -805,13 +906,22 @@
                         A comprehensive Flutter application that serves as your smart companion for metro travel with intelligent route planning and real-time navigation.
                     </p>
                     
-                    <a href="https://drive.google.com/drive/folders/1UeRLM9ruFMQ9-rcQPmw7cH7svXSAEKBY?usp=sharing" target="_blank" 
-                       class="button-glow w-full bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
-                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                        Download APK
-                    </a>
+                    <div class="flex gap-3">
+                        <a href="https://drive.google.com/drive/folders/1UeRLM9ruFMQ9-rcQPmw7cH7svXSAEKBY?usp=sharing" target="_blank" 
+                           class="button-glow flex-1 bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/mohaaHeiba/metro-guide" target="_blank" 
+                           class="button-glow flex-1 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Code
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Brain Tumor Classification -->
@@ -833,13 +943,22 @@
                         An AI-powered medical diagnostic tool built with Flutter and Python that revolutionizes brain MRI scan analysis.
                     </p>
                     
-                    <a href="https://the-magnificent-three.vercel.app/" target="_blank" 
-                       class="button-glow w-full bg-gradient-to-r from-purple to-electric-blue hover:from-electric-blue hover:to-neon-blue px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                        </svg>
-                        View Project
-                    </a>
+                    <div class="flex gap-3">
+                        <a href="https://the-magnificent-three.vercel.app/" target="_blank" 
+                           class="button-glow flex-1 bg-gradient-to-r from-purple to-electric-blue hover:from-electric-blue hover:to-neon-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/mohaaHeiba/the-magnificent-three" target="_blank" 
+                           class="button-glow flex-1 border-2 border-purple text-purple hover:bg-purple hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Code
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Spotify Clone -->
@@ -861,13 +980,22 @@
                         A fully-featured music streaming application that replicates core Spotify functionality.
                     </p>
                     
-                    <a href="https://github.com/mohaaHeiba/spotify-clone" target="_blank" 
-                       class="button-glow w-full bg-gradient-to-r from-neon-blue to-purple hover:from-purple hover:to-electric-blue px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
-                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        View Project
-                    </a>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/mohaaHeiba/spotify-clone" target="_blank" 
+                           class="button-glow flex-1 bg-gradient-to-r from-neon-blue to-purple hover:from-purple hover:to-electric-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/mohaaHeiba/spotify-clone" target="_blank" 
+                           class="button-glow flex-1 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Code
+                        </a>
+                    </div>
                 </div>
 
                 <!-- The Grimoire -->
@@ -889,13 +1017,22 @@
                         A modern novel reading application designed for the ultimate reading experience.
                     </p>
                     
-                    <a href="https://86xf0kqg.r.ap-southeast-1.awstrack.me/L0/https:%2F%2Fapkpure.com%2Fp%2Fcom.example.the_grimoire/1/010e0198ea7ef2d7-b202f22b-22b1-41c5-9c86-e9550dfb9874-000000/MKWOr5bB8_BoGpsd6eBFGQHGoZE=225" target="_blank" 
-                       class="button-glow w-full bg-gradient-to-r from-electric-blue to-purple hover:from-purple hover:to-neon-blue px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
-                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                        Download App
-                    </a>
+                    <div class="flex gap-3">
+                        <a href="https://86xf0kqg.r.ap-southeast-1.awstrack.me/L0/https:%2F%2Fapkpure.com%2Fp%2Fcom.example.the_grimoire/1/010e0198ea7ef2d7-b202f22b-22b1-41c5-9c86-e9550dfb9874-000000/MKWOr5bB8_BoGpsd6eBFGQHGoZE=225" target="_blank" 
+                           class="button-glow flex-1 bg-gradient-to-r from-electric-blue to-purple hover:from-purple hover:to-neon-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/mohaaHeiba/the-grimoire" target="_blank" 
+                           class="button-glow flex-1 border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Code
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Polaris Chat -->
@@ -917,13 +1054,22 @@
                         A productivity-focused desktop application that combines communication with task management.
                     </p>
                     
-                    <a href="https://github.com/mohaaHeiba/Polariss" target="_blank" 
-                       class="button-glow w-full bg-gradient-to-r from-purple to-neon-blue hover:from-neon-blue hover:to-electric-blue px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                        <svg class="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        View Project
-                    </a>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/mohaaHeiba/Polariss" target="_blank" 
+                           class="button-glow flex-1 bg-gradient-to-r from-purple to-neon-blue hover:from-neon-blue hover:to-electric-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/mohaaHeiba/Polariss" target="_blank" 
+                           class="button-glow flex-1 border-2 border-purple text-purple hover:bg-purple hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
+                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View Code
+                        </a>
+                    </div>
                 </div>
             </div>
 
