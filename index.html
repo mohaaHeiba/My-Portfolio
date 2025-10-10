@@ -558,7 +558,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="font-orbitron text-2xl font-bold gradient-text neon-glow">
-                    &lt;MTA /&gt;
+                    &lt;MH &gt;
                 </div>
                 <div class="hidden md:flex space-x-6">
                     <a href="#home" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
@@ -664,9 +664,7 @@
                         <span class="gradient-text">Heiba</span>
                     </h1>
                     <div class="text-xl sm:text-2xl lg:text-4xl text-tech-gray mb-10 font-light">
-                        <span class="font-mono text-neon-blue">&lt;</span>
                         <span class="typing-effect font-orbitron font-semibold">Software Engineer</span>
-                        <span class="font-mono text-neon-blue">/&gt;</span>
                     </div>
                     <p class="text-xl text-gray-300 mb-12 max-w-2xl leading-relaxed font-light">
                         Crafting innovative mobile applications with cutting-edge AI integration. 
@@ -1512,7 +1510,10 @@
                     typingText.textContent += text.charAt(i);
                     i++;
                     setTimeout(typeWriter, 100);
-                }
+                }else {
+            // ✅ بعد ما يخلص الكلام، يخفي الكيرسور
+            typingText.style.borderRight = 'none';
+        }
             }
             
             setTimeout(typeWriter, 1000);
