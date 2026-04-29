@@ -1,1604 +1,1717 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="uPqvx0RJBIQ-JwJwm8iq8o8-g7F_0I_G4nxN0DQGpTU" />
-    
     <title>Mohamed Heiba (محمد هيبه) - Software Engineer & Flutter Developer</title>
-
-    <meta name="description" content="Portfolio of Mohamed Heiba (محمد هيبه), a Software Engineer and Flutter Developer based in Egypt. Expert in Mobile Apps, AI integration, and Clean Architecture.">
-
+    <meta name="description"
+        content="Portfolio of Mohamed Heiba (محمد هيبه), a Software Engineer and Flutter Developer based in Egypt. Expert in Mobile Apps, AI integration, and Clean Architecture.">
     <meta name="keywords" content="Mohamed Heiba, محمد هيبه, Software Engineer, Flutter Developer, Egypt, Portfolio">
-
     <meta name="author" content="Mohamed Heiba">
-
     <meta property="og:title" content="Mohamed Heiba - Software Engineer">
-    <meta property="og:description" content="Check out the portfolio of Mohamed Heiba, Flutter Developer and Software Engineer.">
-    <meta property="og:image" content="https://drive.google.com/file/d/1Bu0J1lh6BejAu31SAQLXkcMd8dEkE-KI/view?usp=drive_link"> <meta property="og:url" content="رابط_موقعك_لما_ترفع_هنا">
+    <meta property="og:description"
+        content="Check out the portfolio of Mohamed Heiba, Flutter Developer and Software Engineer.">
+    <meta property="og:image"
+        content="https://drive.google.com/file/d/1Bu0J1lh6BejAu31SAQLXkcMd8dEkE-KI/view?usp=drive_link">
     <meta property="og:type" content="website">
-
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Mohamed Heiba",
-      "alternateName": "محمد هيبه",
-      "jobTitle": "Software Engineer",
-      "url": "رابط_موقعك_الجديد",
-      "sameAs": [
-        "https://www.linkedin.com/in/mohamed-heiba-141963325/",
-        "https://github.com/mohaaHeiba",
-        "https://www.facebook.com/yourprofile" 
-      ]
-    }
+    {"@context":"http://schema.org","@type":"Person","name":"Mohamed Heiba","alternateName":"محمد هيبه","jobTitle":"Software Engineer","sameAs":["https://www.linkedin.com/in/mohamed-heiba-141963325/","https://github.com/mohaaHeiba"]}
     </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-blue': '#0f172a',
-                        'navy': '#1e293b',
-                        'electric-blue': '#3b82f6',
-                        'light-blue': '#60a5fa',
-                        'tech-gray': '#64748b',
-                        'neon-blue': '#00d4ff',
-                        'purple': '#8b5cf6',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'fade-in': 'fadeIn 1s ease-out',
-                        'pulse-slow': 'pulse 3s ease-in-out infinite',
-                        'glow': 'glow 2s ease-in-out infinite alternate',
-                        'rotate-slow': 'rotate 20s linear infinite',
-                        'bounce-slow': 'bounce 3s ease-in-out infinite',
-                        'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite',
-                        'gradient-shift': 'gradientShift 8s ease-in-out infinite',
-                        'particle-float': 'particleFloat 15s linear infinite',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Overpass+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-            overflow-x: hidden;
+        :root {
+            --primary: #2563EB;
+            --secondary: #06B6D4;
+            --success: #16A34A;
+            --warning: #D97706;
+            --danger: #DC2626;
+            --bg: #030712;
+            --surface: #0f172a;
+            --card: #1e293b;
+            --card-hover: #273548;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-dim: #475569;
+            --border: rgba(37, 99, 235, 0.15);
+            --border-hover: rgba(37, 99, 235, 0.35);
+            --gradient: linear-gradient(135deg, #2563EB, #06B6D4);
+            --gradient-subtle: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(6, 182, 212, 0.08));
+            --font: 'Jost', sans-serif;
+            --mono: 'Overpass Mono', monospace;
+            --r-sm: 12px;
+            --r-md: 16px;
+            --r-lg: 24px;
+            --r-xl: 32px;
+            --ease: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html {
-                font-size: 90.5%; /* ❌ ده كمان عامل تصغير */
+            font-size: 100%;
+            scroll-behavior: smooth;
         }
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-        
-        .font-orbitron {
-            font-family: 'Orbitron', monospace;
+
+        a {
+            color: inherit;
+            text-decoration: none;
         }
-        
-        .tech-pattern {
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        
-        .geometric-bg {
-            background-image: 
-                linear-gradient(30deg, rgba(59, 130, 246, 0.08) 12%, transparent 12.5%, transparent 87%, rgba(59, 130, 246, 0.08) 87.5%),
-                linear-gradient(150deg, rgba(0, 212, 255, 0.05) 12%, transparent 12.5%, transparent 87%, rgba(0, 212, 255, 0.05) 87.5%),
-                linear-gradient(30deg, rgba(139, 92, 246, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(139, 92, 246, 0.03) 87.5%);
-            background-size: 120px 200px, 80px 140px, 60px 100px;
+
+        :focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: var(--r-sm);
         }
-        
-        .glass-card {
-            background: rgba(30, 41, 59, 0.3);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 16px;
+            padding: 8px 16px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: var(--r-sm);
+            z-index: 9999;
+            font-weight: 600;
         }
-        
-        .glass-card-enhanced {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(30px);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15),
-                0 0 40px rgba(59, 130, 246, 0.1);
+
+        .skip-link:focus {
+            top: 16px;
         }
-        
-        .hover-lift {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 5px;
         }
-        
-        .hover-lift:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 
-                0 30px 60px rgba(59, 130, 246, 0.25),
-                0 0 50px rgba(0, 212, 255, 0.15);
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
         }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6, #00d4ff, #8b5cf6, #ffffff);
-            background-size: 300% 300%;
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        /* Gradient text */
+        .gt {
+            background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 8s ease-in-out infinite;
-        }
-        
-        .neon-glow {
-            text-shadow: 
-                0 0 5px rgba(59, 130, 246, 0.8),
-                0 0 10px rgba(59, 130, 246, 0.6),
-                0 0 15px rgba(59, 130, 246, 0.4),
-                0 0 20px rgba(59, 130, 246, 0.2);
-        }
-        
-        .tech-border {
-            position: relative;
-        }
-        
-        .tech-border::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            padding: 2px;
-            background: linear-gradient(45deg, #3b82f6, #00d4ff, #8b5cf6, #3b82f6);
-            background-size: 300% 300%;
-            border-radius: inherit;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            animation: gradientShift 6s ease-in-out infinite;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: particleFloat 15s linear infinite;
-        }
-        
-        .particle:nth-child(2n) {
-            background: radial-gradient(circle, rgba(0, 212, 255, 0.6) 0%, transparent 70%);
-            animation-duration: 20s;
-        }
-        
-        .particle:nth-child(3n) {
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
-            animation-duration: 25s;
-        }
-        
-        .typing-effect {
-            border-right: 3px solid #3b82f6;
-            animation: blink-caret .75s step-end infinite;
-        }
-        
-        .skill-bar {
-            background: linear-gradient(90deg, #3b82f6, #00d4ff, #8b5cf6);
-            background-size: 200% 100%;
-            height: 8px;
-            border-radius: 4px;
-            transform-origin: left;
-            transform: scaleX(0);
-            transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            animation: gradientShift 3s ease-in-out infinite;
-        }
-        
-        .skill-bar.animate {
-            transform: scaleX(1);
-        }
-        
-        .project-card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .project-card:hover::before {
-            left: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 
-                0 25px 50px rgba(59, 130, 246, 0.3),
-                0 0 60px rgba(0, 212, 255, 0.2);
-        }
-        
-        .nav-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: rgba(100, 116, 139, 0.4);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            position: relative;
-        }
-        
-        .nav-dot::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #3b82f6, #00d4ff);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .nav-dot.active {
-            background: linear-gradient(45deg, #3b82f6, #00d4ff);
-            transform: scale(1.3);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
-        }
-        
-        .nav-dot.active::before {
-            opacity: 0.3;
-        }
-        
-        .floating-shape {
-            position: absolute;
-            opacity: 0.15;
-            animation: float 8s ease-in-out infinite;
-            filter: blur(1px);
-        }
-        
-        .floating-shape:nth-child(2) { animation-delay: -2s; animation-duration: 10s; }
-        .floating-shape:nth-child(3) { animation-delay: -4s; animation-duration: 12s; }
-        .floating-shape:nth-child(4) { animation-delay: -6s; animation-duration: 14s; }
-        
-        .hero-bg-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
-            animation: gradientShift 15s ease-in-out infinite;
-        }
-        
-        .button-glow {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .button-glow::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .button-glow:hover::before {
-            left: 100%;
-        }
-        
-        .section-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #3b82f6, #00d4ff, #8b5cf6, transparent);
-            margin: 4rem 0;
-            opacity: 0.6;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-            25% { transform: translateY(-20px) rotate(2deg) scale(1.05); }
-            50% { transform: translateY(-10px) rotate(-1deg) scale(0.95); }
-            75% { transform: translateY(-15px) rotate(1deg) scale(1.02); }
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(60px) scale(0.95); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
-            to { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(0, 212, 255, 0.4); }
-        }
-        
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes particleFloat {
-            0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) translateX(100px) rotate(360deg); opacity: 0; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #3b82f6; }
-        }
-        
-        .scroll-indicator {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(59, 130, 246, 0.2);
-            z-index: 1000;
-        }
-        
-        .scroll-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #00d4ff, #8b5cf6);
-            background-size: 200% 100%;
-            width: 0%;
-            transition: width 0.1s ease;
-            animation: gradientShift 3s ease-in-out infinite;
-        }
-        
-        .section-padding {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-        
-        .project-tech-tag {
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #60a5fa;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .project-tech-tag:hover {
-            background: rgba(59, 130, 246, 0.25);
-            border-color: rgba(59, 130, 246, 0.6);
-            transform: translateY(-2px);
-        }
-        
-        .contact-input {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-input:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-            background: rgba(30, 41, 59, 0.6);
-        }
-        
-        .social-link {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .social-link:hover {
-            background: rgba(59, 130, 246, 0.2);
-            border-color: rgba(59, 130, 246, 0.5);
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(30, 41, 59, 0.3);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #3b82f6, #00d4ff);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #00d4ff, #8b5cf6);
         }
 
-        html, body { width: 100%; overflow-x: hidden; }
-        img, svg, video, canvas { max-width: 100%; height: auto; }
-        * { box-sizing: border-box; }
-        /* Prevent horizontal overflow on sections */
-        section { overflow-x: hidden; }
-        /* Defensive responsive rules to prevent right-side overflow */
-        .grid, .flex { min-width: 0; }
-        .max-w-7xl, .mx-auto, .px-6 { max-width: 100%; }
-        p, a, span, h1, h2, h3, h4, h5, h6 { overflow-wrap: anywhere; word-break: break-word; }
-        .glass-card, .glass-card-enhanced { max-width: 100%; }
-        
-        /* Timeline Styles */
-        .timeline-container {
-            position: relative;
+        /* Container */
+        .wrap {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 32px;
         }
-        
-        .timeline-line {
-            position: absolute;
-            left: 50px;
+
+        /* ── NAV ── */
+        .nav {
+            position: fixed;
             top: 0;
-            bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, #3b82f6, #00d4ff, #8b5cf6);
-            border-radius: 2px;
+            width: 100%;
+            z-index: 100;
+            padding: 16px 0;
         }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 4rem;
-            padding-left: 120px;
-        }
-        
-        .timeline-marker {
+
+        .nav-bg {
             position: absolute;
-            left: 32px;
-            top: 20px;
-            width: 36px;
-            height: 36px;
-            background: #1a1a1a;
-            border: 3px solid #00d4ff;
-            border-radius: 50%;
+            inset: 0;
+            background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-pills {
+            display: flex;
+            background: var(--surface);
+            border-radius: 999px;
+            padding: 4px;
+            gap: 2px;
+            border: 1px solid var(--border);
+        }
+
+        .nav-pills a {
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.25s var(--ease);
+            white-space: nowrap;
+        }
+
+        .nav-pills a:hover {
+            color: var(--text);
+            background: var(--card);
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            border-radius: 999px;
+            background: var(--gradient);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s var(--ease);
+            border: none;
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+            padding: 8px;
+            min-width: 44px;
+            min-height: 44px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            top: 70px;
+            background: rgba(3, 7, 18, 0.97);
+            backdrop-filter: blur(20px);
+            z-index: 99;
+            padding: 32px;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--text);
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 16px;
+            border-radius: var(--r-md);
+            transition: background 0.2s;
+        }
+
+        .mobile-menu a:hover {
+            background: var(--surface);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+            margin-bottom: 20px;
+        }
+
+        .hero-role {
+            font-family: var(--mono);
+            color: var(--primary);
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 500;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-role::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            max-width: 500px;
+            margin-bottom: 32px;
+        }
+
+        .hero-tag {
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 36px;
+        }
+
+        .hero-photo {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            border-radius: var(--r-xl);
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            padding: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 10;
         }
-        
-        .timeline-marker::before {
+
+        @keyframes spin {
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .hero-photo::before {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #00d4ff;
-            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent 0%, transparent 70%, var(--primary) 85%, var(--secondary) 100%);
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: spin 3s linear infinite;
+            z-index: 0;
         }
-        
-        .timeline-content {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        .hero-photo::after {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: var(--bg);
+            border-radius: calc(var(--r-xl) - 3px);
+            z-index: 1;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: calc(var(--r-xl) - 4px);
             position: relative;
+            z-index: 2;
         }
-        
-        .timeline-content:hover {
-            transform: translateY(-8px) scale(1.02);
-            border-color: rgba(59, 130, 246, 0.5);
-            box-shadow: 
-                0 25px 50px rgba(59, 130, 246, 0.2),
-                0 0 40px rgba(0, 212, 255, 0.1);
+
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08), transparent 70%);
+            top: 5%;
+            right: -15%;
+            pointer-events: none;
         }
-        
-        .timeline-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            font-family: 'Orbitron', monospace;
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            font-family: var(--font);
+            transition: all 0.3s var(--ease);
+            cursor: pointer;
+            border: none;
+            min-height: 48px;
         }
-        
-        .timeline-company {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #00d4ff;
-            margin-bottom: 0.5rem;
+
+        .btn-p {
+            background: var(--gradient);
+            color: #fff;
         }
-        
-        .timeline-dates {
-            color: #aaaaaa;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+
+        .btn-p:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 35px rgba(37, 99, 235, 0.35);
         }
-        
-        .timeline-description {
-            color: #aaaaaa;
+
+        .btn-o {
+            background: transparent;
+            color: var(--text);
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-o:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-g {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* ── SECTIONS ── */
+        .sec {
+            padding: 100px 0;
+        }
+
+        .sec-head {
+            margin-bottom: 56px;
+        }
+
+        .sec-head h2 {
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .sec-head p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 550px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.25), rgba(6, 182, 212, 0.15), transparent);
+        }
+
+        /* ── ABOUT ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .about-text {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.8;
+        }
+
+        .about-text strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 28px;
+        }
+
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            color: var(--text-muted);
             line-height: 1.6;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
-        
-        @media (max-width: 768px) {
-            .timeline-container {
-                padding: 0 1rem;
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .check-list strong {
+            color: var(--text);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-top: 32px;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 36px;
+            text-align: center;
+            transition: all 0.3s var(--ease);
+        }
+
+        .stat:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(37, 99, 235, 0.1);
+        }
+
+        .stat-n {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .stat-l {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        /* ── TIMELINE ── */
+        .tl {
+            position: relative;
+            max-width: 850px;
+            margin: 0 auto;
+            padding-left: 56px;
+        }
+
+        .tl::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), transparent);
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        .tl-dot {
+            position: absolute;
+            left: -46px;
+            top: 20px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--bg);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+
+        .tl-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 28px 32px;
+            transition: all 0.3s var(--ease);
+        }
+
+        .tl-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tl-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .tl-card .co {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .tl-card .dt {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            font-family: var(--mono);
+            margin-bottom: 14px;
+        }
+
+        .tl-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        /* ── BENTO PROJECTS ── */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            grid-auto-rows: 320px;
+        }
+
+        .bento-item {
+            position: relative;
+            border-radius: var(--r-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: all 0.4s var(--ease);
+            cursor: pointer;
+        }
+
+        .bento-item.wide {
+            grid-column: span 2;
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease);
+        }
+
+        .bento-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .bento-item:hover {
+            border-color: var(--border-hover);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .bento-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.4) 40%, transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            transition: all 0.3s var(--ease);
+        }
+
+        .bento-tag {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .bento-overlay h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .bento-overlay p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .bento-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .bento-actions a {
+            padding: 7px 16px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .bento-actions .ba-p {
+            background: var(--gradient);
+            color: #fff;
+        }
+
+        .bento-actions .ba-o {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+        }
+
+        .bento-actions .ba-p:hover {
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+        }
+
+        .bento-actions .ba-o:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .bento-emoji {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 44px;
+            height: 44px;
+            background: rgba(3, 7, 18, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: var(--r-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        /* ── SKILLS ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .skill-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 32px;
+            transition: all 0.3s var(--ease);
+        }
+
+        .skill-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.08);
+        }
+
+        .skill-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-card h3 .ic {
+            width: 32px;
+            height: 32px;
+            border-radius: var(--r-sm);
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .skill-list li:last-child {
+            border: none;
+        }
+
+        .skill-list li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ── CERTS ── */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .cert-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s var(--ease);
+        }
+
+        .cert-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+        }
+
+        .cert-ic {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--gradient-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+        }
+
+        .cert-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .cert-card .meta {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-bottom: 12px;
+        }
+
+        .cert-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 4px 14px;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+
+        .cert-sm {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        /* ── CONTACT ── */
+        .contact-grid-new {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 24px;
+        }
+
+        .contact-links-new {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .contact-card-hover {
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card-hover:hover {
+            border-color: rgba(37, 99, 235, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 40px rgba(37, 99, 235, 0.1);
+        }
+
+        @media(max-width:1024px) {
+            .contact-grid-new {
+                grid-template-columns: 1fr;
             }
-            
-            .timeline-line {
-                left: 25px;
+            .contact-links-new {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
             }
-            
-            .timeline-item {
-                padding-left: 80px;
+        }
+
+        @media(max-width:640px) {
+            .contact-links-new {
+                grid-template-columns: 1fr;
             }
-            
-            .timeline-marker {
-                left: 12px;
-                width: 28px;
-                height: 28px;
+        }
+
+
+
+        .c-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            border-radius: var(--r-md);
+            transition: background 0.2s;
+        }
+
+        .c-info:hover {
+            background: var(--card-hover);
+        }
+
+        .c-info .ciw {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--r-sm);
+            background: var(--card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .c-info .cl {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .c-info .cv {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        /* ── SCROLL PROGRESS ── */
+        .scroll-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            z-index: 200;
+            background: var(--gradient);
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Side dots */
+        .side-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .nav-dot {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-dot::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-dim);
+            transition: all 0.3s var(--ease);
+        }
+
+        .nav-dot.active::after {
+            background: var(--primary);
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+            transform: scale(1.5);
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px)
             }
-            
-            .timeline-marker::before {
-                width: 16px;
-                height: 16px;
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: var(--primary)
+            }
+        }
+
+        .anim {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s var(--ease);
+        }
+
+        .anim.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-typing {
+            border-right: 2px solid var(--primary);
+            animation: blink 0.8s step-end infinite;
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1024px) {
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 280px;
+            }
+
+            .bento-item.wide {
+                grid-column: span 1;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-pills {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .side-dots {
+                display: none;
+            }
+        }
+
+        @media(max-width:640px) {
+
+            .bento,
+            .skills-grid,
+            .cert-grid,
+            .cert-sm {
+                grid-template-columns: 1fr;
+            }
+
+            .wrap {
+                padding: 0 16px;
+            }
+
+            .sec {
+                padding: 64px 0;
+            }
+
+            .tl {
+                padding-left: 40px;
+            }
+
+            .tl::before {
+                left: 10px;
+            }
+
+            .tl-dot {
+                left: -36px;
+            }
+
+            .contact-wrap {
+                padding: 32px;
+            }
+
+            .hero-photo {
+                max-width: 280px;
             }
         }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
-    <!-- Particle Background -->
-    <div class="fixed inset-0 pointer-events-none z-0">
-        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-        <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-        <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
-        <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
-        <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
-        <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
-        <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
-        <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
-    </div>
 
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-indicator">
-        <div class="scroll-progress" id="scrollProgress"></div>
-    </div>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="scroll-bar" id="scrollBar"></div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card-enhanced">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="font-orbitron text-2xl font-bold gradient-text neon-glow">
-                    MH 
-                </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#home" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Home
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#about" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        About
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#experience" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Experience
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#projects" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Projects
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#skills" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Skills
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#certifications" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Certifications
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#contact" class="nav-link hover:text-neon-blue transition-all duration-300 font-medium relative group">
-                        Contact
-                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-electric-blue to-neon-blue transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                </div>
-                <button class="md:hidden text-white hover:text-neon-blue transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+    <!-- Nav -->
+    <nav class="nav" aria-label="Main">
+        <div class="nav-bg"></div>
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo gt">MH</a>
+            <div class="nav-pills">
+                <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a>
+                <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certifications">Certs</a>
             </div>
+            <a href="#contact" class="nav-cta">Contact me</a>
+            <button class="nav-toggle" aria-label="Menu"
+                onclick="document.getElementById('mm').classList.toggle('active')">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
     </nav>
-
-    <!-- Side Navigation Dots -->
-    <div class="fixed right-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:flex flex-col space-y-4">
-        <div class="nav-dot" data-section="home"></div>
-        <div class="nav-dot" data-section="about"></div>
-        <div class="nav-dot" data-section="experience"></div>
-        <div class="nav-dot" data-section="projects"></div>
-        <div class="nav-dot" data-section="skills"></div>
-        <div class="nav-dot" data-section="certifications"></div>
-        <div class="nav-dot" data-section="contact"></div>
+    <div class="mobile-menu" id="mm">
+        <a href="#home" onclick="document.getElementById('mm').classList.remove('active')">Home</a>
+        <a href="#about" onclick="document.getElementById('mm').classList.remove('active')">About</a>
+        <a href="#experience" onclick="document.getElementById('mm').classList.remove('active')">Experience</a>
+        <a href="#projects" onclick="document.getElementById('mm').classList.remove('active')">Projects</a>
+        <a href="#skills" onclick="document.getElementById('mm').classList.remove('active')">Skills</a>
+        <a href="#certifications" onclick="document.getElementById('mm').classList.remove('active')">Certifications</a>
+        <a href="#contact" onclick="document.getElementById('mm').classList.remove('active')">Contact</a>
     </div>
 
-    <!-- Hero Section -->  
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden tech-pattern  px-18">
-        <div class="hero-bg-animation"></div>
-        
-        <!-- Enhanced Floating Geometric Shapes -->
-        <div class="floating-shape top-20 left-20">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                <rect width="80" height="80" fill="url(#grad1)" opacity="0.4" rx="8"/>
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#3b82f6"/>
-                        <stop offset="50%" style="stop-color:#00d4ff"/>
-                        <stop offset="100%" style="stop-color:#8b5cf6"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-        <div class="floating-shape top-40 right-32">
-            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                <circle cx="30" cy="30" r="30" fill="url(#grad2)" opacity="0.3"/>
-                <defs>
-                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#00d4ff"/>
-                        <stop offset="100%" style="stop-color:#8b5cf6"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-        <div class="floating-shape bottom-32 left-1/4">
-            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                <polygon points="50,10 90,70 10,70" fill="url(#grad3)" opacity="0.25"/>
-                <defs>
-                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#8b5cf6"/>
-                        <stop offset="50%" style="stop-color:#3b82f6"/>
-                        <stop offset="100%" style="stop-color:#00d4ff"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
-        <div class="floating-shape top-1/3 right-1/4">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M20 0L24.7 15.3L40 20L24.7 24.7L20 40L15.3 24.7L0 20L15.3 15.3L20 0Z" fill="#3b82f6" opacity="0.2"/>
-            </svg>
-        </div>
+    <div class="side-dots">
+        <button class="nav-dot active" data-section="home" aria-label="Home"></button>
+        <button class="nav-dot" data-section="about" aria-label="About"></button>
+        <button class="nav-dot" data-section="experience" aria-label="Experience"></button>
+        <button class="nav-dot" data-section="projects" aria-label="Projects"></button>
+        <button class="nav-dot" data-section="skills" aria-label="Skills"></button>
+        <button class="nav-dot" data-section="certifications" aria-label="Certifications"></button>
+        <button class="nav-dot" data-section="contact" aria-label="Contact"></button>
+    </div>
 
-        <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div class="animate-slide-up">
-                   
-                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-8 leading-tight font-orbitron">
-                        <span class="gradient-text neon-glow">Mohamed</span><br>
-                        <span class="gradient-text">Heiba</span>
-                    </h1>
-                    <div class="text-xl sm:text-2xl lg:text-4xl text-tech-gray mb-10 font-light">
-                        <span class="typing-effect font-orbitron font-semibold">Software Engineer</span>
-                    </div>
-                    <p class="text-xl text-gray-300 mb-12 max-w-2xl leading-relaxed font-light">
-                        Crafting innovative mobile applications with cutting-edge AI integration. 
-                        Passionate about transforming complex problems into elegant, user-centric solutions 
-                        that push the boundaries of technology.
-                    </p>
-                    <div class="text-lg sm:text-xl text-center mb-8">
-                        <span class="gradient-text font-orbitron font-semibold">
-                            🚀 Always exploring new tools and ideas to craft smarter solutions
-                        </span>
-                    </div>
-                    <div class="flex flex-wrap gap-8">
-                        <button onclick="scrollToSection('projects')" 
-                                class="button-glow bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 transform">
-                            <span class="flex items-center">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0l-4 4m4-4l-4-4"/>
+    <main id="main">
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-glow"></div>
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <h1><span class="gt">Mohamed</span><br>Heiba</h1>
+                        <div class="hero-role"><span class="hero-typing" id="typingText" data-text="Software Engineer"></span></div>
+                        <p class="hero-desc">Crafting innovative mobile applications with cutting-edge AI integration. Passionate about transforming complex problems into elegant, user-centric solutions that push the boundaries of technology.</p>
+                        <div class="hero-tag"
+                            style="font-family:var(--mono);font-size:0.82rem;color:var(--text-muted);letter-spacing:0.02em;">
+                            2+ Years Experience · 7 Shipped Products · Top 1% Turing.com</div>
+                        <div class="btn-g">
+                            <button onclick="scrollToSection('projects')" class="btn btn-p">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 11H5m14 0l-4 4m4-4l-4-4" />
                                 </svg>
-                                Explore My Work
-                            </span>
-                        </button>
-                        <a href="https://drive.google.com/file/d/1Bu0J1lh6BejAu31SAQLXkcMd8dEkE-KI/view?usp=drive_link" 
-                           target="_blank"
-                           class="button-glow border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30">
-                            <span class="flex items-center">
-                                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                Explore Work
+                            </button>
+                            <a href="https://drive.google.com/file/d/1Bu0J1lh6BejAu31SAQLXkcMd8dEkE-KI/view?usp=drive_link"
+                                target="_blank" class="btn btn-o">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
                                 Download CV
-                            </span>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="flex justify-center lg:justify-end animate-fade-in">
-                    <div class="relative">
-                        <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden tech-border glass-card-enhanced hover-lift">
-                            <img src="https://www.dropbox.com/scl/fi/2jqisi4u1lm80teb0v231/Untitled.jpeg?rlkey=b3q00z8vp1koyg8ygmbgz25sx&st&raw=1" 
-                                 alt="Mohamed Taher Amin" 
-                                 class="w-full h-full object-cover"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="w-full h-full bg-gradient-to-br from-electric-blue via-neon-blue to-purple flex items-center justify-center" style="display: none;">
-                                <svg class="w-40 h-40 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    <div style="display:flex;justify-content:center;">
+                        <div class="hero-photo">
+                            <img src="https://avatars.githubusercontent.com/u/195448976?v=4" alt="Mohamed Heiba"
+                                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div
+                                style="display:none;width:100%;height:100%;background:var(--gradient);align-items:center;justify-content:center;">
+                                <svg width="100" height="100" fill="rgba(255,255,255,0.8)" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ABOUT -->
+        <section id="about" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">About</span> Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <p class="about-text">I picked up <strong>Flutter</strong> in college and never really stopped.
+                            One codebase, every platform — something about that clicked for me, so I kept going deeper
+                            into the stack.</p>
+                        <p class="about-text" style="margin-top:16px;">My biggest project so far is <strong>EGX
+                                360</strong> — a FinTech platform I built for my graduation that runs live on AWS,
+                            scrapes real market data, and has an ML model trained on nearly three decades of Egyptian
+                            stock history. That project broke me a few times and taught me more than anything else.</p>
+                        <p class="about-text" style="margin-top:16px;">Earlier this year I passed <strong>Turing.com's
+                                global developer assessment</strong>, top 1% worldwide. Currently open to remote work
+                            and freelance — if you're building something interesting, I'd like to hear about it.</p>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-n gt">2+</div>
+                            <div class="stat-l">Years Building</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-n gt">Top 1%</div>
+                            <div class="stat-l">Globally</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">Experience</span></h2>
+                    <p>From AI evaluation to production mobile apps — building across the full stack.</p>
+                </div>
+                <div class="tl">
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>Technical Analyst (AI Systems)</h3>
+                            <div class="co">@Turing.com — Contract</div>
+                            <div class="dt">Mar 2026 – Apr 2026 | Remote</div>
+                            <p>Contract role assessing AI systems — prompt quality, response accuracy, and failure
+                                patterns across production model outputs.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>Freelance Flutter Developer</h3>
+                            <div class="co">@Fiverr & Independent Projects</div>
+                            <div class="dt">Sep 2025 – Present | Remote</div>
+                            <p>Providing end-to-end mobile application development services for clients and startups.
+                                Specializing in creating high-quality, cross-platform applications using Flutter,
+                                focusing on polished UIs, robust performance, and AI integration.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>Cross Platform Mobile App Developer</h3>
+                            <div class="co">@DEPI — Intern</div>
+                            <div class="dt">Jun 2025 – Dec 2025 | Cairo</div>
+                            <p>Delivered 3 cross-platform mobile apps using Flutter, BLoC, and offline-first
+                                architecture with SQLite/Hive. Shipped 3 apps in 6 months, including a full Cairo metro
+                                navigation system.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>UI/UX Design Intern</h3>
+                            <div class="co">@Elevvo Pathways</div>
+                            <div class="dt">Aug 2025 – Sep 2025 | Remote</div>
+                            <p>Designed mobile and web UIs with a focus on visual hierarchy and consistency. Built
+                                interactive prototypes in Figma from wireframes to high-fidelity designs ready for
+                                developer handoff. Created reusable design systems across multiple projects.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>Data Communication</h3>
+                            <div class="co">@Arab Organization for Industrialization (AOI)</div>
+                            <div class="dt">2025 | Cairo, Egypt</div>
+                            <p>Completed an intensive course focused on data communication principles. Gained hands-on
+                                experience with network protocols, data transmission techniques, and network security
+                                fundamentals.</p>
+                        </div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-card">
+                            <h3>Cloud Computing & IoT Intern</h3>
+                            <div class="co">@AOI & Huawei</div>
+                            <div class="dt">Jul 2024 – Aug 2024 | Giza</div>
+                            <p>Deployed scalable apps on GCP and Firebase with optimized APIs. Built a real-time IoT
+                                prototype using MQTT protocol to sync hardware sensors with cloud dashboards. Delivered
+                                under a 4-week deadline alongside Huawei engineers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- PROJECTS BENTO -->
+        <section id="projects" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">FEATURED</span><br>WORKS</h2>
+                    <p>From FinTech platforms to AI medical tools — real products, real impact.</p>
+                </div>
+
+                <div class="bento">
+                    <!-- EGX 360 - wide (NEW) -->
+                    <div class="bento-item wide">
+                        <img src="https://www.dropbox.com/scl/fi/cwwtf2cfhc1dmjjwj13x6/WhatsApp-Image-2025-12-15-at-17.47.38.jpeg?rlkey=481zvtw4cvedxj91zru6n8ci7&st=pol24a9h&raw=1"
+                            alt="EGX 360" loading="lazy">
+                        <div class="bento-emoji">📈</div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">FinTech • Graduation Project</span>
+                            <h3>EGX 360</h3>
+                            <p>Live market data, AI chatbot, automated risk engine on AWS, and an ML model trained on 28
+                                years of stock history. Cross-platform Flutter.</p>
+                            <div class="bento-actions">
+                                <a href="https://github.com/mohaaHeiba" target="_blank" class="ba-p">Live Demo</a>
+                                <a href="https://github.com/mohaaHeiba" target="_blank" class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mega News -->
+                    <div class="bento-item">
+                        <img src="https://www.dropbox.com/scl/fi/cwwtf2cfhc1dmjjwj13x6/WhatsApp-Image-2025-12-15-at-17.47.38.jpeg?rlkey=481zvtw4cvedxj91zru6n8ci7&st=pol24a9h&raw=1"
+                            alt="Mega News" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">AI News Aggregator</span>
+                            <h3>Mega News</h3>
+                            <p>Multi-source news app with Gemini AI summaries, voice search, TTS, and offline-first
+                                architecture.</p>
+                            <div class="bento-actions">
+                                <a href="https://drive.google.com/file/d/1QsdgztfShyNUgrJM6naZ3tF2-b55AyFL/view?usp=drive_link"
+                                    target="_blank" class="ba-p">APK</a>
+                                <a href="https://github.com/mohaaHeiba/mega-news" target="_blank" class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brain Tumor (Magnificent Three) -->
+                    <div class="bento-item">
+                        <img src="https://www.dropbox.com/scl/fi/x7qvpukclrca08rgry3g7/The-Magnificent-Three?rlkey=cuhf4go8smt4wrfg6fke9w3bo&st=znb27tme&dl=1"
+                            alt="The Magnificent Three" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">AI Medical Imaging</span>
+                            <h3>The Magnificent Three</h3>
+                            <p>Brain tumor classifier with 6 ML models, Flask API, and drag-and-drop MRI upload.</p>
+                            <div class="bento-actions">
+                                <a href="https://the-magnificent-three.vercel.app/" target="_blank"
+                                    class="ba-p">Live</a>
+                                <a href="https://github.com/mohaaHeiba/the-magnificent-three" target="_blank"
+                                    class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metro Guide - wide -->
+                    <div class="bento-item wide">
+                        <img src="https://www.dropbox.com/scl/fi/t3h9e57k7krdt6ky0c1r0/Metro-Guide.png?rlkey=6swwvbad901m75989y2apqw8o&st=9164x0cw&dl=1"
+                            alt="Metro Guide" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Smart Navigation</span>
+                            <h3>Metro Guide</h3>
+                            <p>Offline-first metro navigation with smart route-finding, GPS, OpenStreetMap, and
+                                Arabic/English support.</p>
+                            <div class="bento-actions">
+                                <a href="https://drive.google.com/drive/folders/1UeRLM9ruFMQ9-rcQPmw7cH7svXSAEKBY?usp=sharing"
+                                    target="_blank" class="ba-p">Download</a>
+                                <a href="https://github.com/mohaaHeiba/Metro_Guide" target="_blank"
+                                    class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Clone -->
+                    <div class="bento-item">
+                        <img src="https://www.dropbox.com/scl/fi/jo78e5pgznf0xrfag8fv5/Spotify-Clone.png?rlkey=vzo98o836nn7d79b6on13nhn1&st=mcm935rc&dl=1"
+                            alt="Spotify Clone" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Music Streaming</span>
+                            <h3>Spotify Clone</h3>
+                            <p>Full music streaming app with background audio, lock screen controls, and real-time
+                                likes.</p>
+                            <div class="bento-actions">
+                                <a href="https://drive.google.com/file/d/1rpE_l7aoYQXBKqiuDpho0lEPyaq7z9Zs/view?usp=drive_link"
+                                    target="_blank" class="ba-p">Download</a>
+                                <a href="https://github.com/mohaaHeiba/spotify-clone" target="_blank"
+                                    class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Grimoire -->
+                    <div class="bento-item">
+                        <img src="https://www.dropbox.com/scl/fi/vww57co6wvl7hg1pi3l09/The-Grimoire.png?rlkey=0rwjgqdjklhf15sl3p9hl3r91&st=aa72yc6y&dl=1"
+                            alt="The Grimoire" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">Digital Reading</span>
+                            <h3>The Grimoire</h3>
+                            <p>Feature-rich e-reader with chapter navigation, bookmarks, AI suggestions, and Firebase
+                                backend.</p>
+                            <div class="bento-actions">
+                                <a href="https://86xf0kqg.r.ap-southeast-1.awstrack.me/L0/https:%2F%2Fapkpure.com%2Fp%2Fcom.example.the_grimoire/1/010e0198ea7ef2d7-b202f22b-22b1-41c5-9c86-e9550dfb9874-000000/MKWOr5bB8_BoGpsd6eBFGQHGoZE=225"
+                                    target="_blank" class="ba-p">Download</a>
+                                <a href="https://github.com/mohaaHeiba/The-Grimoire" target="_blank"
+                                    class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Brain Tumor TFLite -->
+                    <div class="bento-item">
+                        <img src="https://www.dropbox.com/scl/fi/x7qvpukclrca08rgry3g7/The-Magnificent-Three?rlkey=cuhf4go8smt4wrfg6fke9w3bo&st=znb27tme&dl=1"
+                            alt="Brain Tumor Detection" loading="lazy">
+                        <div class="bento-emoji"></div>
+                        <div class="bento-overlay">
+                            <span class="bento-tag">On-Device AI</span>
+                            <h3>Brain Tumor Detection</h3>
+                            <p>On-device TFLite inference for MRI classification with role-based auth and patient
+                                management.</p>
+                            <div class="bento-actions">
+                                <a href="https://github.com/mohaaHeiba" target="_blank" class="ba-p">Download</a>
+                                <a href="https://github.com/mohaaHeiba" target="_blank" class="ba-o">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:48px;">
+                    <a href="https://github.com/mohaaHeiba" target="_blank" class="btn btn-p"
+                        style="font-size:1rem;padding:16px 36px;">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Explore All Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- SKILLS -->
+        <section id="skills" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">Technical</span> Arsenal</h2>
+                    <p>The tools, frameworks, and paradigms I use to build real products.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3><span class="ic"><svg width="18" height="18" fill="none" stroke="#fff" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg></span>Mobile & Cross-Platform</h3>
+                        <ul class="skill-list">
+                            <li>Flutter & Dart</li>
+                            <li>GetX · BLoC State Management</li>
+                            <li>Clean Architecture & MVVM</li>
+                            <li>SOLID Principles & OOP</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3><span class="ic"><svg width="18" height="18" fill="none" stroke="#fff" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                                </svg></span>Backend & Cloud</h3>
+                        <ul class="skill-list">
+                            <li>Supabase (PostgreSQL · Realtime · RLS)</li>
+                            <li>Firebase (Firestore · Auth · FCM)</li>
+                            <li>AWS EC2 · GCP · systemd · cron</li>
+                            <li>REST APIs · WebSockets · MQTT</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <h3><span class="ic"><svg width="18" height="18" fill="none" stroke="#fff" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
+                                </svg></span>Languages & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Dart · Python · SQL</li>
+                            <li>Git · GitHub Actions · CI/CD</li>
+                            <li>Linux · SSH · Shell Scripting</li>
+                            <li>Figma · UI/UX Design</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certifications" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">Education</span> & Certs</h2>
+                    <p>Degrees, programs, and the certifications that actually mattered.</p>
+                </div>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-ic"><svg width="24" height="24" fill="none" stroke="var(--primary)"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0v7" />
+                            </svg></div>
+                        <h3>B.Sc. Computer Science</h3>
+                        <div class="meta">King Salman International University | 2022–2026 | GPA: 3.5/4.0</div>
+                        <p>Specializing in Software Engineering with a focus on building robust and scalable
+                            applications.</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-ic"><svg width="24" height="24" fill="none" stroke="var(--primary)"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg></div>
+                        <h3>Top 1% — Turing.com Verified</h3>
+                        <div class="meta">Global Developer Vetting | Mar 2026</div>
+                        <p>Passed Turing.com's rigorous global assessment, placing in the top 1% of developers
+                            worldwide.</p>
+                    </div>
+                </div>
+                <div class="cert-grid cert-sm" style="margin-top:16px;">
+                    <div class="cert-card">
+                        <div class="cert-ic"><svg width="20" height="20" fill="none" stroke="var(--primary)"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg></div>
+                        <h3>Flutter & Dart — IBM & Udemy</h3>
+                        <p>iOS, Android, and mobile apps.</p>
+                        <span class="cert-badge">Coursera · Feb 2026</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-ic"><svg width="20" height="20" fill="none" stroke="var(--primary)"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                            </svg></div>
+                        <h3>UX/UI Design — Meta</h3>
+                        <p>Principles of UX/UI Design.</p>
+                        <span class="cert-badge">Coursera · Jul 2025</span>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-ic"><svg width="20" height="20" fill="none" stroke="var(--primary)"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg></div>
+                        <h3>Version Control — Meta</h3>
+                        <p>Git, GitHub, and GitHub Actions.</p>
+                        <span class="cert-badge">Coursera · Aug 2025</span>
+                    </div>
+
+                </div>
+                <div style="text-align:center;margin-top:40px;">
+                    <a href="https://drive.google.com/drive/folders/1yEdMYoHSW6meGo3t_t824BAqdthUWNGo?usp=sharing"
+                        target="_blank" class="btn btn-p">View All Certifications</a>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+
+        <!-- CONTACT -->
+        <section id="contact" class="sec">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2><span class="gt">Get In</span> Touch</h2>
+                    <p>Ready to collaborate on innovative projects or discuss opportunities.</p>
+                </div>
+                <div class="contact-grid-new">
+                    <!-- Left Panel: Info -->
+                    <div class="bento-item anim" style="padding:48px; border-color: rgba(37, 99, 235, 0.2);">
+                        <h3 style="font-size: 1.8rem; margin-bottom: 16px;">Let's Build Something <span class="gt">Great</span> Together</h3>
+                        <p style="color:var(--text-muted);line-height:1.8;">Open to remote work · Available for freelance · Cairo, Egypt (UTC+2)</p>
+                        <p style="color:var(--text-muted);line-height:1.8;margin-top:12px;">If you're building something interesting and need a Flutter developer who ships — let's talk.</p>
                         
-                        <!-- Enhanced Tech Icons -->
-                        <div class="absolute -top-8 -right-8 w-20 h-20 glass-card-enhanced rounded-2xl flex items-center justify-center animate-bounce-slow">
-                            <svg class="w-10 h-10 text-neon-blue" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        </div>
-                        <div class="absolute -bottom-8 -left-8 w-20 h-20 glass-card-enhanced rounded-2xl flex items-center justify-center animate-pulse-slow">
-                            <svg class="w-10 h-10 text-purple" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                            </svg>
-                        </div>
-                        <div class="absolute top-1/2 -right-12 w-16 h-16 glass-card rounded-xl flex items-center justify-center animate-float">
-                            <svg class="w-8 h-8 text-electric-blue" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="text-center mb-16">
-            <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">About Me</h2>
-            <p class="text-xl max-w-3xl mx-auto opacity-80">
-              From Hardware to Pixels: Crafting Tomorrow's Digital Experiences
-            </p>
-          </div>
-      
-          <div class="grid lg:grid-cols-3 gap-12 items-start">
-            
-            <div class="lg:col-span-2 space-y-8">
-              <div>
-              
-                <p class="leading-relaxed text-gray-300 text-lg">
-                  I’m <strong>Mohamed Heiba</strong>,  a Software Engineering  who loves turning bold ideas into polished, user-centric apps. I found my passion in <strong>Flutter</strong>, where I craft cross-platform products that blend clean UIs, smooth performance, and smart AI features.
-                </p>
-              </div>
-      
-              <div>
-                <h3 class="text-3xl font-semibold mb-6 text-cyan-400 font-orbitron flex items-center">
-                  <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                  Key Projects & Learnings
-                </h3>
-                <ul class="list-none space-y-4 text-gray-300">
-                  <li class="flex items-start">
-                    <strong class="text-cyan-400 mr-3 mt-1">✓</strong>
-                    <span><strong>AI-Powered Brain Tumor Classifier:</strong> Leveraged deep learning to analyze medical imaging, teaching me to balance cutting-edge innovation with the human touch.</span>
-                  </li>
-                  <li class="flex items-start">
-                    <strong class="text-cyan-400 mr-3 mt-1">✓</strong>
-                    <span><strong>Spotify-Style Music App:</strong> Focused on creating a seamless user experience with robust streaming and offline capabilities.</span>
-                  </li>
-                   <li class="flex items-start">
-                    <strong class="text-cyan-400 mr-3 mt-1">✓</strong>
-                    <span><strong>The Grimoire Reading Platform:</strong> Engineered a modern, adaptive UI to enhance the digital reading experience.</span>
-                  </li>
-                </ul>
-              </div>
-      
-              <blockquote class="border-l-4 border-cyan-400 pl-6 mt-6">
-                <p class="text-xl font-medium text-gray-200 italic">
-                  🚀 My goal is simple: build technology that feels magical, works flawlessly, and genuinely improves people’s lives.
-                </p>
-              </blockquote>
-            </div>
-      
-            <div class="flex flex-col gap-8">
-              <div class="rounded-xl bg-gray-800/60 backdrop-blur p-8 text-center shadow-md hover:shadow-cyan-500/40 transition">
-                <div class="text-6xl font-bold text-cyan-400 font-orbitron mb-2">15+</div>
-                <div class="text-gray-300 font-semibold">Projects Completed</div>
-              </div>
-      
-              <div class="rounded-xl bg-gray-800/60 backdrop-blur p-8 text-center shadow-md hover:shadow-purple-500/40 transition">
-                <div class="text-6xl font-bold text-purple-400 font-orbitron mb-2">2+</div>
-                <div class="text-gray-300 font-semibold">Years Experience</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Professional Experience Section -->
-    <section id="experience" class="section-padding geometric-bg overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">Experience</h2>
-                <p class="text-2xl text-gray-300 max-w-4xl mx-auto font-light">
-                    Professional journey in software development and technology innovation
-                </p>
-            </div>
-
-            <div class="timeline-container">
-                <div class="timeline-line"></div>
-                
-               
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Freelance Flutter Developer</h3>
-                        <div class="timeline-company">@Fiverr & Independent Projects</div>
-                        <div class="timeline-dates">Sep 2025 – Present | Remote</div>
-                        <p class="timeline-description">
-                            Providing end-to-end mobile application development services for clients and startups. 
-                            Specializing in creating high-quality, cross-platform applications using Flutter, focusing on 
-                            polished UIs, robust performance, and AI integration.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">UI/UX Design Intern</h3>
-                        <div class="timeline-company">@Elevvo</div>
-                        <div class="timeline-dates">Sep 2025 | Remote</div>
-                        <p class="timeline-description">
-                            Designed user-centric wireframes and high-fidelity prototypes for mobile applications. 
-                            Conducted user research and usability testing to inform design decisions, and collaborated 
-                            with developers to ensure pixel-perfect implementation.
-                        </p>
-                    </div>
-                </div>
-
-                
-                <!-- Aoi Internship -->
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Data Communication </h3>
-                        <div class="timeline-company">@Arab Organization for Industrialization (AOI)</div>
-                        <div class="timeline-dates">2025 | Cairo, Egypt</div>
-                        <p class="timeline-description">
-                            Completed an intensive course focused on data communication principles. 
-                            Gained hands-on experience with network protocols, data transmission techniques, 
-                            and network security fundamentals.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Internet of Things (IoT) Intern</h3>
-                        <div class="timeline-company">@Arab Organization for Industrialization (AOI)</div>
-                        <div class="timeline-dates">2024 | Giza, Egypt</div>
-                        <p class="timeline-description">
-                            Developed a real-time IoT prototype using the MQTT protocol, successfully connecting 
-                            and managing 3+ hardware sensors. Achieved over 95% data stability through 
-                            comprehensive network performance testing.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Cloud Computing Intern</h3>
-                        <div class="timeline-company">@Arab Organization for Industrialization (AOI)</div>
-                        <div class="timeline-dates">2024 | Giza, Egypt</div>
-                        <p class="timeline-description">
-                            Deployed 2+ scalable applications on Firebase and Google Cloud platforms. 
-                            Optimized backend performance, achieving a 25% improvement in API response times 
-                            through efficient data structuring and API integration strategies.
-                        </p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">Featured Projects</h2>
-                <p class="text-2xl text-gray-300 max-w-4xl mx-auto font-light">
-                    Innovative solutions combining cutting-edge technology with exceptional user experience
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Metro Guide -->
-                <div class="project-card rounded-3xl p-6">
-                    <img src="https://www.dropbox.com/scl/fi/t3h9e57k7krdt6ky0c1r0/Metro-Guide.png?rlkey=6swwvbad901m75989y2apqw8o&st=9164x0cw&dl=1" 
-                         alt="Metro Guide – app screenshot" 
-                         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-                         loading="lazy">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-neon-blue rounded-2xl flex items-center justify-center mr-4">
-                            <span class="text-2xl">🚇</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">Metro Guide</h3>
-                            <p class="text-neon-blue font-bold text-base">2025 • Smart Transportation</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-                        A comprehensive Flutter application that serves as your smart companion for metro travel with intelligent route planning and real-time navigation.
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="https://drive.google.com/drive/folders/1UeRLM9ruFMQ9-rcQPmw7cH7svXSAEKBY?usp=sharing" target="_blank" 
-                           class="button-glow flex-1 bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            Download
-                        </a>
-                        <a href="https://github.com/mohaaHeiba/Metro_Guide" target="_blank" 
-                           class="button-glow flex-1 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Brain Tumor Classification -->
-                <div class="project-card rounded-3xl p-6">
-                    <img src="https://www.dropbox.com/scl/fi/x7qvpukclrca08rgry3g7/The-Magnificent-Three?rlkey=cuhf4go8smt4wrfg6fke9w3bo&st=znb27tme&dl=1" 
-                         alt="Brain Tumor Classification – app screenshot" 
-                         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-                         loading="lazy">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-neon-blue rounded-2xl flex items-center justify-center mr-4">
-                            <span class="text-2xl">🧠</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">The Magnificent Three</h3>
-                            <p class="text-neon-blue font-bold text-base">2025 • AI Medical Diagnostic</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-                        An AI-powered medical diagnostic tool built with Flutter and Python that revolutionizes brain MRI scan analysis.
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="https://the-magnificent-three.vercel.app/" target="_blank" 
-                           class="button-glow flex-1 bg-gradient-to-r from-purple to-electric-blue hover:from-electric-blue hover:to-neon-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            Download
-                        </a>
-                        <a href="https://github.com/mohaaHeiba/the-magnificent-three" target="_blank" 
-                           class="button-glow flex-1 border-2 border-purple text-purple hover:bg-purple hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Spotify Clone -->
-                <div class="project-card rounded-3xl p-6">
-                    <img src="https://www.dropbox.com/scl/fi/jo78e5pgznf0xrfag8fv5/Spotify-Clone.png?rlkey=vzo98o836nn7d79b6on13nhn1&st=mcm935rc&dl=1" 
-                         alt="Spotify Clone – app screenshot" 
-                         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-                         loading="lazy">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-neon-blue to-purple rounded-2xl flex items-center justify-center mr-4">
-                            <span class="text-2xl">🎵</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">Spotify Clone App</h3>
-                            <p class="text-purple font-bold text-base">2025 • Music Streaming Platform</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-                        A fully-featured music streaming application that replicates core Spotify functionality.
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="https://drive.google.com/file/d/1rpE_l7aoYQXBKqiuDpho0lEPyaq7z9Zs/view?usp=drive_link" target="_blank" 
-                           class="button-glow flex-1 bg-gradient-to-r from-neon-blue to-purple hover:from-purple hover:to-electric-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            Download
-                        </a>
-                        <a href="https://github.com/mohaaHeiba/spotify-clone" target="_blank" 
-                           class="button-glow flex-1 border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-neon-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- The Grimoire -->
-                <div class="project-card rounded-3xl p-6">
-                    <img src="https://www.dropbox.com/scl/fi/vww57co6wvl7hg1pi3l09/The-Grimoire.png?rlkey=0rwjgqdjklhf15sl3p9hl3r91&st=aa72yc6y&dl=1" 
-                         alt="The Grimoire – app screenshot" 
-                         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-                         loading="lazy">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-purple to-electric-blue rounded-2xl flex items-center justify-center mr-4">
-                            <span class="text-2xl">📚</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">The Grimoire</h3>
-                            <p class="text-electric-blue font-bold text-base">2025 • Digital Reading Platform</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-                        A modern novel reading application designed for the ultimate reading experience.
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="https://86xf0kqg.r.ap-southeast-1.awstrack.me/L0/https:%2F%2Fapkpure.com%2Fp%2Fcom.example.the_grimoire/1/010e0198ea7ef2d7-b202f22b-22b1-41c5-9c86-e9550dfb9874-000000/MKWOr5bB8_BoGpsd6eBFGQHGoZE=225" target="_blank" 
-                           class="button-glow flex-1 bg-gradient-to-r from-electric-blue to-purple hover:from-purple hover:to-neon-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            Download
-                        </a>
-                        <a href="https://github.com/mohaaHeiba/The-Grimoire" target="_blank" 
-                           class="button-glow flex-1 border-2 border-electric-blue text-electric-blue hover:bg-electric-blue hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Polaris Chat -->
-<div class="project-card rounded-3xl p-6">
-    <img src="https://www.dropbox.com/scl/fi/cwwtf2cfhc1dmjjwj13x6/WhatsApp-Image-2025-12-15-at-17.47.38.jpeg?rlkey=481zvtw4cvedxj91zru6n8ci7&st=pol24a9h&raw=1" 
-         alt="Mega News – app screenshot" 
-         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-         loading="lazy">
-    
-    <div class="flex items-center mb-4">
-        <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-purple rounded-2xl flex items-center justify-center mr-4">
-            <span class="text-3xl">📰</span>
-        </div>
-        <div>
-            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">Mega News</h3>
-            <p class="text-neon-blue font-bold text-base">2025 • AI News Aggregator</p>
-        </div>
-    </div>
-
-    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-        Your smart daily briefing hub that collects news from global sources in one place. It uses AI to summarize long articles instantly and offers voice narration (Text-to-Speech) so you can listen to the news on the go.
-    </p>
-    
-    <div class="flex gap-3">
-        <a href="https://drive.google.com/file/d/1QsdgztfShyNUgrJM6naZ3tF2-b55AyFL/view?usp=drive_link" target="_blank" 
-           class="button-glow flex-1 bg-gradient-to-r from-purple to-neon-blue hover:from-neon-blue hover:to-electric-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-            </svg>
-            APK
-        </a>
-
-        <a href="https://github.com/mohaaHeiba/mega-news" target="_blank" 
-           class="button-glow flex-1 border-2 border-purple text-purple hover:bg-purple hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-            </svg>
-            Code
-        </a>
-    </div>
-</div>
-                <!-- Polaris Chat -->
-                <div class="project-card rounded-3xl p-6">
-                    <img src="https://dl.dropboxusercontent.com/scl/fi/5ghrt56vdoqioorlalgdj/Screenshot-from-. .png?rlkey=hcund4z46ube2xpm8dn02bhxv" 
-                         alt="Polaris Chat – app screenshot" 
-                         class="w-full h-48 md:h-56 object-cover rounded-2xl mb-4" 
-                         loading="lazy">
-                    <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-gradient-to-br from-electric-blue to-purple rounded-2xl flex items-center justify-center mr-4">
-                            <span class="text-2xl">💬</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white mb-1 font-orbitron">Polaris Chat</h3>
-                            <p class="text-neon-blue font-bold text-base">2025 • AI Productivity Suite</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-8 leading-relaxed text-base">
-                        A productivity-focused desktop application that combines communication with task management.
-                    </p>
-                    
-                    <div class="flex gap-3">
-                        <a href="https://github.com/mohaaHeiba/Polariss" target="_blank" 
-                           class="button-glow flex-1 bg-gradient-to-r from-purple to-neon-blue hover:from-neon-blue hover:to-electric-blue px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                            Download
-                        </a>
-                        <a href="https://github.com/mohaaHeiba/Polariss" target="_blank" 
-                           class="button-glow flex-1 border-2 border-purple text-purple hover:bg-purple hover:text-white px-4 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple/30 flex items-center justify-center group">
-                            <svg class="w-4 h-4 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-16">
-                <a href="https://github.com/mohaaHeiba" target="_blank" 
-                   class="button-glow inline-flex items-center bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-12 py-6 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <svg class="w-6 h-6 mr-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    Explore All Projects
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">Technical Skills</h2>
-            <p class="text-xl max-w-3xl mx-auto opacity-80">
-                A showcase of my expertise in modern development technologies and principles.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-
-            <div class="glass-card-enhanced rounded-2xl p-8 hover-lift">
-                <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mr-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold font-orbitron text-cyan-400">Mobile & Frontend</h3>
-                </div>
-                <ul class="space-y-3 text-gray-300 text-lg">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>Flutter</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>Dart</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>Cross-Platform Development</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>Responsive UI Design</li>
-                </ul>
-            </div>
-
-            <div class="glass-card-enhanced rounded-2xl p-8 hover-lift">
-                <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold font-orbitron text-purple-400">Backend & Cloud</h3>
-                </div>
-                 <ul class="space-y-3 text-gray-300 text-lg">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Firebase Suite</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Google Cloud Platform (GCP)</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Dart Frog</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>REST APIs & Databases (MySQL, SQLite)</li>
-                </ul>
-            </div>
-
-            <div class="glass-card-enhanced rounded-2xl p-8 hover-lift">
-                <div class="flex items-center mb-6">
-                     <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mr-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold font-orbitron text-cyan-400">Architecture & State</h3>
-                </div>
-                 <ul class="space-y-3 text-gray-300 text-lg">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>Clean Architecture</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>MVVM Pattern</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>BLoC Pattern</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>GetX</li>
-                </ul>
-            </div>
-
-            <div class="glass-card-enhanced rounded-2xl p-8 hover-lift">
-                <div class="flex items-center mb-6">
-                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center mr-4">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M12 6V3m0 18v-3M5.636 5.636l-1.414-1.414M19.778 5.636l-1.414 1.414M5.636 19.778l-1.414 1.414M19.778 19.778l-1.414-1.414"></path></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold font-orbitron text-purple-400">Principles & Tools</h3>
-                </div>
-                 <ul class="space-y-3 text-gray-300 text-lg">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>UI/UX Design Fundamentals</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Machine Learning (ML) Integration</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Git & GitHub</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>Unit & Widget Testing</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</section>
-    <div class="section-divider"></div>
-
-    <!-- Certifications Section -->    <section id="certifications" class="section-padding">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">Education & Certifications</h2>
-                <p class="text-xl max-w-3xl mx-auto opacity-80">
-                    Always learning, always leveling up.
-                </p>
-            </div>
-    
-            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
-                <div class="relative pt-10">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center tech-border z-10">
-                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v3.422a12.083 12.083 0 01-6.824 2.998A11.952 11.952 0 006 20.055a11.952 11.952 0 006-2.998c2.276 0 4.386.63 6.082 1.705A12.078 12.078 0 0118 17.022V14.22l-6-3.22z"></path></svg>
-                    </div>
-                    <div class="glass-card-enhanced rounded-2xl p-8 pt-14 hover-lift h-full flex flex-col">
-                        <h3 class="text-2xl font-bold font-orbitron text-white mb-2 text-center">
-                            Bachelor of Computer Science
-                        </h3>
-                        <p class="text-center text-gray-400 mb-4">King Salman International University | 2022 – 2026</p>
-                        <p class="text-gray-300 leading-relaxed text-center flex-1">
-                            Specializing in Software Engineering with a focus on building robust and scalable applications. Maintained an excellent academic record.
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="relative pt-10">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center tech-border z-10">
-                         <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                    </div>
-                    <div class="glass-card-enhanced rounded-2xl p-8 pt-14 hover-lift h-full flex flex-col">
-                        <h3 class="text-2xl font-bold font-orbitron text-white mb-2 text-center">
-                            Digital Egypt Pioneers Initiative
-                        </h3>
-                         <p class="text-center text-gray-400 mb-4">Cross-Platform Mobile Apps Developer | Jun – Dec 2025</p>
-                        <p class="text-gray-300 leading-relaxed text-center flex-1">
-                            An intensive, government-sponsored program covering the full mobile development lifecycle, from advanced Flutter to secure deployment.
-                        </p>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                
-                <div class="relative pt-10">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center tech-border z-10">
-                        <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <div class="glass-card-enhanced rounded-2xl p-6 pt-12 text-center hover-lift h-full flex flex-col">
-                        <h4 class="text-xl font-bold font-orbitron text-white mb-2">Basic to Advanced Flutter</h4>
-                        <p class="text-gray-400 leading-relaxed text-sm flex-1">
-                            A comprehensive course covering the full spectrum of Flutter, from UI fundamentals to advanced state management.
-                        </p>
-                        <div class="mt-4">
-                            <span class="inline-block bg-cyan-400/10 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold">Udemy</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative pt-10">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center tech-border z-10">
-                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                    </div>
-                    <div class="glass-card-enhanced rounded-2xl p-6 pt-12 text-center hover-lift h-full flex flex-col">
-                        <h4 class="text-xl font-bold font-orbitron text-white mb-2">Professional Development Track</h4>
-                        <p class="text-gray-400 leading-relaxed text-sm flex-1">
-                            Industry-focused training on professional workflows, advanced animations, and software best practices.
-                        </p>
-                        <div class="mt-4">
-                            <span class="inline-block bg-cyan-400/10 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold">Udemy & LinkedIn Learning</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative pt-10">
-                     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center tech-border z-10">
-                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>
-                    </div>
-                    <div class="glass-card-enhanced rounded-2xl p-6 pt-12 text-center hover-lift h-full flex flex-col">
-                        <h4 class="text-xl font-bold font-orbitron text-white mb-2">Version Control with Git/GitHub</h4>
-                        <p class="text-gray-400 leading-relaxed text-sm flex-1">
-                           Official Meta certification on modern version control workflows.
-                        </p>
-                        <div class="mt-4">
-                             <span class="inline-block bg-cyan-400/10 text-cyan-300 px-3 py-1 rounded-full text-xs font-semibold">Coursera & Datacamp</span>
-                        </div>
-                    </div>
-                </div>
-    
-               
-            </div>
-    
-            <div class="text-center mt-16">
-                <a href="https://drive.google.com/drive/folders/1yEdMYoHSW6meGo3t_t824BAqdthUWNGo?usp=sharing" class="button-glow inline-flex items-center bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-electric-blue/30 transform">
-                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    View All Certifications
-                </a>
-            </div>
-        </div>
-    </section>
-    <div class="section-divider"></div>
-
-    <!-- Contact Section -->
-   <section id="contact" class="section-padding overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-extrabold mb-6 font-orbitron neon-glow">Get In Touch</h2>
-            <p class="text-xl max-w-3xl mx-auto opacity-80">
-                Ready to collaborate on innovative projects or discuss opportunities.
-            </p>
-        </div>
-
-        <div class="glass-card-enhanced rounded-3xl p-10 lg:p-12">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-                <div class="space-y-6">
-                    <h3 class="text-4xl font-bold text-neon-blue font-orbitron">Let's Build Something Great Together</h3>
-                    <p class="text-gray-300 leading-relaxed text-lg">
-                        I'm always excited to discuss new opportunities and collaborate on innovative projects. Whether you're looking for a mobile developer, an AI enthusiast, or someone passionate about creating impactful technology, I'd love to hear from you.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed text-lg">
-                        Use any of the links on the right to connect with me or drop me a line directly via email.
-                    </p>
-                </div>
-
-                <div class="flex flex-col gap-6">
-                    
-                    <a href="https://www.linkedin.com/in/mohamed-heiba-141963325/" target="_blank" 
-                       class="button-glow bg-gradient-to-r from-electric-blue to-neon-blue hover:from-neon-blue hover:to-purple w-full px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        Connect on LinkedIn
-                    </a>
-                    
-                    <a href="https://github.com/mohaaHeiba" target="_blank" 
-                       class="button-glow border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-blue w-full px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        View GitHub
-                    </a>
-                    
-                    <div class="pt-6 mt-6 border-t border-neon-blue/30 space-y-6">
-                        <a href="mailto:mohamedheiba88998@gmail.com" class="flex items-center group">
-                             <div class="w-12 h-12 bg-gray-800/60 rounded-xl flex items-center justify-center mr-4 transition-colors duration-300 group-hover:bg-electric-blue/50">
-                                <svg class="w-6 h-6 text-neon-blue" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-white transition-colors duration-300 group-hover:text-neon-blue">Direct Email</p>
-                                <p class="text-gray-400">mohamedheiba88998@gmail.com</p>
-                            </div>
-                        </a>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-gray-800/60 rounded-xl flex items-center justify-center mr-4">
-                               <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                            </div>
-                            <div>
-                                <p class="font-semibold text-white">Location</p>
-                                <p class="text-gray-400">Giza, Egypt</p>
+                        <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 24px;">
+                            <a href="mailto:mohamedheiba88998@gmail.com" class="c-info" style="text-decoration:none; padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 16px; transition: all 0.3s ease;">
+                                <div class="ciw" style="background:var(--bg); border: 1px solid var(--border);"><svg width="20" height="20" fill="var(--primary)" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg></div>
+                                <div>
+                                    <p class="cl">Direct Email</p>
+                                    <p class="cv" style="font-size: 1.1rem; color: var(--text);">mohamedheiba88998@gmail.com</p>
+                                </div>
+                            </a>
+                            <div class="c-info" style="padding: 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 16px;">
+                                <div class="ciw" style="background:var(--bg); border: 1px solid var(--border);"><svg width="20" height="20" fill="var(--secondary)" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg></div>
+                                <div>
+                                    <p class="cl">Location</p>
+                                    <p class="cv" style="font-size: 1.1rem; color: var(--text);">Cairo, Egypt</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Right Panel: Links -->
+                    <div class="contact-links-new">
+                        <a href="https://www.linkedin.com/in/mohamed-heiba-141963325/" target="_blank" class="bento-item anim contact-card-hover" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 48px; text-decoration:none; text-align:center;">
+                            <div class="ciw" style="width:64px; height:64px; border-radius:50%; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); display:flex; align-items:center; justify-content:center; margin-bottom: 20px;">
+                                <svg width="28" height="28" fill="var(--primary)" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </div>
+                            <h3 style="color:var(--text); font-size: 1.3rem; margin:0; font-weight: 600;">LinkedIn</h3>
+                            <p style="color:var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Let's connect</p>
+                        </a>
+                        <a href="https://github.com/mohaaHeiba" target="_blank" class="bento-item anim contact-card-hover" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 48px; text-decoration:none; text-align:center; animation-delay: 0.1s;">
+                            <div class="ciw" style="width:64px; height:64px; border-radius:50%; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom: 20px;">
+                                <svg width="28" height="28" fill="var(--text)" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                            <h3 style="color:var(--text); font-size: 1.3rem; margin:0; font-weight: 600;">GitHub</h3>
+                            <p style="color:var(--text-muted); font-size: 0.9rem; margin-top: 8px;">View my code</p>
+                        </a>
+                    </div>
                 </div>
-
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-16 border-t border-neon-blue/30">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="font-orbitron text-3xl font-black gradient-text neon-glow mb-6">
-                &lt;Mohamed Heiba /&gt;
-            </div>
-            <p class="text-gray-400 mb-3 text-lg">© 2025 All rights reserved.</p>
-            <p class="text-gray-500">Built with passion for innovation and excellence</p>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p class="gt" style="font-size:1.1rem;font-weight:700;margin-bottom:6px;">&lt;Mohamed Heiba /&gt;</p>
+            <p>© 2026 All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling function
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
+        function scrollToSection(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function (e) { e.preventDefault(); scrollToSection(this.getAttribute('href').substring(1)); }));
 
-        // Navigation smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                scrollToSection(targetId);
-            });
-        });
+        // Scroll progress
+        window.addEventListener('scroll', () => { const t = window.pageYOffset, h = document.body.offsetHeight - window.innerHeight; document.getElementById('scrollBar').style.width = Math.min((t / h) * 100, 100) + '%'; });
 
-        // Scroll progress indicator
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.offsetHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
-        });
+        // Nav dots
+        const dots = document.querySelectorAll('.nav-dot'), secs = document.querySelectorAll('section[id]');
+        dots.forEach(d => d.addEventListener('click', () => scrollToSection(d.dataset.section)));
+        window.addEventListener('scroll', () => { let c = ''; secs.forEach(s => { if (scrollY >= s.offsetTop - 200) c = s.id; }); dots.forEach(d => { d.classList.toggle('active', d.dataset.section === c); }); });
 
-        // Side navigation dots
-        const navDots = document.querySelectorAll('.nav-dot');
-        const sections = document.querySelectorAll('section[id]');
-
-        navDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const sectionId = dot.getAttribute('data-section');
-                scrollToSection(sectionId);
-            });
-        });
-
-        // Update active nav dot on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navDots.forEach(dot => {
-                dot.classList.remove('active');
-                if (dot.getAttribute('data-section') === current) {
-                    dot.classList.add('active');
-                }
-            });
-        });
-
-        // Skill bars animation
-        const skillBars = document.querySelectorAll('.skill-bar');
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bar = entry.target;
-                    const width = bar.getAttribute('data-width');
-                    setTimeout(() => {
-                        bar.style.width = width;
-                        bar.classList.add('animate');
-                    }, 500);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        skillBars.forEach(bar => {
-            skillObserver.observe(bar);
-        });
-
-        // Enhanced form submission with better animations
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const button = this.querySelector('button[type="submit"]');
-                const originalText = button.textContent;
-                
-                button.innerHTML = `
-                    <div class="flex items-center justify-center">
-                        <svg class="animate-spin -ml-1 mr-3 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending Message...
-                    </div>
-                `;
-                button.disabled = true;
-                
-                setTimeout(() => {
-                    button.innerHTML = `
-                        <div class="flex items-center justify-center">
-                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Message Sent Successfully!
-                        </div>
-                    `;
-                    button.classList.remove('from-electric-blue', 'to-neon-blue');
-                    button.classList.add('from-green-500', 'to-green-600');
-                    
-                    this.reset();
-                    
-                    setTimeout(() => {
-                        button.textContent = originalText;
-                        button.disabled = false;
-                        button.classList.remove('from-green-500', 'to-green-600');
-                        button.classList.add('from-electric-blue', 'to-neon-blue');
-                    }, 4000);
-                }, 2500);
-            });
-        }
-
-        // Initialize first nav dot as active
-        if (navDots.length > 0) {
-            navDots[0].classList.add('active');
-        }
-
-        // Add parallax effect to floating shapes
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = scrolled * 0.5;
-            
-            document.querySelectorAll('.floating-shape').forEach((shape, index) => {
-                const speed = (index + 1) * 0.1;
-                shape.style.transform = `translateY(${parallax * speed}px)`;
-            });
-        });
-
-        // Add typing effect to hero text
-        const typingText = document.querySelector('.typing-effect');
-        if (typingText) {
-            const text = typingText.textContent;
-            typingText.textContent = '';
+        // Typing effect
+        const tt = document.getElementById('typingText');
+        if (tt) {
+            const txt = tt.dataset.text || tt.textContent;
+            tt.dataset.text = txt;
+            tt.textContent = '';
             let i = 0;
-            
-            function typeWriter() {
-                if (i < text.length) {
-                    typingText.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }else {
-            // ✅ بعد ما يخلص الكلام، يخفي الكيرسور
-            typingText.style.borderRight = 'none';
-        }
-            }
-            
-            setTimeout(typeWriter, 1000);
+            let isDeleting = false;
+            (function tw() {
+                if (!isDeleting && i < txt.length) {
+                    tt.textContent += txt.charAt(i++);
+                    setTimeout(tw, 40); // typing speed
+                } else if (!isDeleting && i === txt.length) {
+                    isDeleting = true;
+                    setTimeout(tw, 5000); // Wait 5 seconds before deleting
+                } else if (isDeleting && i > 0) {
+                    tt.textContent = txt.substring(0, --i);
+                    setTimeout(tw, 20); // deleting speed
+                } else if (isDeleting && i === 0) {
+                    isDeleting = false;
+                    setTimeout(tw, 500); // Wait half a second before re-typing
+                }
+            })();
         }
 
-        document.querySelectorAll('body *').forEach(el => {
-          const r = el.getBoundingClientRect();
-          if (r.right > document.documentElement.clientWidth + 1) {
-            el.style.outline = '2px solid red';
-            console.log('Overflow →', el);
-          }
-        });
+        // Add anim class to cards FIRST
+        document.querySelectorAll('.bento-item,.skill-card,.cert-card,.stat,.tl-card').forEach((el, i) => { el.classList.add('anim'); el.style.transitionDelay = (i % 6) * 0.08 + 's'; });
+
+        // THEN set up scroll animations observer
+        const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+        document.querySelectorAll('.anim').forEach(el => obs.observe(el));
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975b9644c368522c',t:'MTc1NjI5Nzg5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
+
 </html>
